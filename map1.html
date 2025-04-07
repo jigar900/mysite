@@ -50,7 +50,7 @@
     </style>
 </head>
 <body bgcolor="grey" text="orange">
-<h1><center>Indusrial Training Institute Pardi</center></h1>
+<h1 style="border: 1px solid #8d0a30; padding: 10px; color: white;font-size: 25px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;"><b>Industrial Training Institute Pardi.</b></h1>
 <table border=0 >
 <tr>
 
@@ -58,7 +58,7 @@
 <h3>
 <table border=5 cellpadding=15 bgcolor="#d1f2f3" text="red">
 
-<caption><b>Trade Information</b></caption>
+<caption><b><H1>Trade Information<H1></b></caption>
 <tr>
 <td style="border: 1px solid #8d0a30; padding: 10px; color: #8d0a30;font-size: 18px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;font-size: 18px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;">Apprentice office</td>
 <td colspan="2" style="border: 1px solid #8d0a30; padding: 10px; color: #8d0a30;font-size: 18px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;">Apprentice office, RTO</td>
@@ -66,7 +66,7 @@
 <tr>
 <td rowspan="2" style="border: 1px solid #8d0a30; padding: 10px; color: #8d0a30;font-size: 18px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;"> Office Building</td>
 <td style="border: 1px solid #8d0a30; padding: 10px; color: #8d0a30;font-size: 18px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;">Ground floor<img src="small-image.jpg" alt=" " onmouseover="openPopup('OFFICEG.jpg')" style="width: 20px; cursor: pointer;" /></td>
-<td style="border: 1px solid #8d0a30; padding: 10px; color: #8d0a30;font-size: 18px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;">Principal office,Forman office,Other office</td>
+<td style="border: 1px solid #8d0a30; padding: 10px; color: #8d0a30;font-size: 18px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;">Principal office,Forman office,Other office<BR> PPO Trade</td>
 </tr>
 <tr style="height: 80px;">
 <td style="border: 1px solid #8d0a30; padding: 10px; color: #8d0a30;font-size: 18px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;">1<sup>st</sup> floor<img src="small-image.jpg" alt=" " onmouseover="openPopup('OFFICE1ST.jpg')" style="width: 20px; cursor: pointer;" /></td>
@@ -103,12 +103,18 @@
 <td style="border: 1px solid #8d0a30; padding: 10px; color: #8d0a30;font-size: 18px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;"colspan="2">Welder</td>
 </h3>
 </tr>
+<tr>
+<td style="border: 1px solid #8d0a30; padding: 10px; color: #8d0a30;font-size: 18px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;">HSI Building</td>
+<td style="border: 1px solid #8d0a30; padding: 10px; color: #8d0a30;font-size: 18px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;"colspan="2">HSI TRADE</td>
+</h3>
+</tr>
 </table>
-</td>
+</td></tr>
+<tr>
 <td>
 
 <DIV>
-<label for="start">Select Place where You stand</label>
+<label for="start">From:</label>
 <select id="stat" onchange="setway1()" >
 <option value="gate">Gate</option>
   <option value="apr">Aprentice Office</option>
@@ -118,7 +124,8 @@
   <option value="g1">G+1(New Building)</option>
   <option value="wd">Welder</option>
 </select>
-<label for="start">Select Place where You want to go</label>
+<br>
+<label for="start">TO:</label>
 <select id="end1" onchange="setway1()">
 <option value="gate">Gate</option>
   <option value="apr">Aprentice Office</option>
