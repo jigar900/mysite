@@ -7,7 +7,7 @@
     <style>
 	    
         .building, .ground {
-            fill: #26ecad;
+            fill: #B2BFC4;
             stroke: black;
             stroke-width: 2;
         }
@@ -58,16 +58,28 @@
 	font-weight: bold;
 	
 	}
+	#fortdl{
+	border: 1px solid #8d0a30;
+	padding: 8px;
+	color: #D80B0D;
+	font-size: 20px;
+	text-anchor: middle;
+	font-family: Arial, sans-serif;
+	font:#164592; 
+	font-weight: bold;
+	
+	}
+	
     </style>
 </head>
-<body bgcolor="#DDD7BD" text="#d1f2f3">
+<body bgcolor="#DDD7BD" text="#E1E8EA">
 <h1 style="border: 1px solid #8d0a30; padding: 4px; color: #4E48E8;font-size: 20px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;"><b>&nbsp&nbsp&nbspIndustrial Training Institute Pardi.</b></h1>
 <table border=0 >
 <tr>
 
 <td>
 
-<table border=5 cellpadding=8 bgcolor="#d1f2f3" text="red">
+<table border=5 cellpadding=8 bgcolor="#E1E8EA" text="red">
 
 <caption><b><H3 style="border: 1px solid #8d0a30; padding: 4px; color: #13105B;font-size: 20px; text-anchor: middle; font-family: Arial, sans-serif; font-weight: bold;">Trade Information<H3></b></caption>
 <tr>
@@ -153,46 +165,46 @@
 </td></tr></table>
 <!--<button onclick="setway1()">Set Path</button>-->
 </DIV>
-<svg width="800" height="800">
+<svg width="800" height="550">
     <!-- Gate -->
     <rect x="250" y="20" width="100" height="40" class="building"></rect>
 	 <text x="300" y="45" class="title">Gate</text>
 
     <!-- Paths -->
-    <line id="l1" x1="300" y1="60" x2="300" y2="120"  stroke="#d1f2f3" stroke-width="6" fill="white"></line>
+    <line id="l1" x1="300" y1="60" x2="300" y2="120"  stroke="#E1E8EA" stroke-width="6" fill="white"></line>
     
     <!-- Apprentice Office -->
     <rect x="360" y="110" width="80" height="40" class="building"></rect>
     <text x="400" y="125">Apprentice</text>
     <text x="400" y="138">Office</text>
-    <line x1="300" y1="120" x2="360" y2="130"  id="l2" stroke="#d1f2f3" stroke-width="6"></line>
+    <line x1="300" y1="120" x2="360" y2="130"  id="l2" stroke="#E1E8EA" stroke-width="6"></line>
 
     <!-- Office Building and COPA -->
     <rect x="450" y="150" width="100" height="60" class="building"></rect>
     <text x="500" y="175">Office Building</text>
     <text x="500" y="190">and COPA</text>
-    <line x1="300" y1="120" x2="300" y2="180"  id="l3" stroke="#d1f2f3" stroke-width="6"></line>
-    <line x1="300" y1="180" x2="450" y2="180"  id="l4" stroke="#d1f2f3" stroke-width="6"></line>
+    <line x1="300" y1="120" x2="300" y2="180"  id="l3" stroke="#E1E8EA" stroke-width="6"></line>
+    <line x1="300" y1="180" x2="450" y2="180"  id="l4" stroke="#E1E8EA" stroke-width="6"></line>
 
     <!-- HSI LACP Lab -->
     <rect x="80" y="170" width="100" height="60" class="building"></rect>
     <text x="110" y="195">HSI</text>
     <text x="113" y="210">LACP Lab</text>
-    <line x1="180" y1="185" x2="300" y2="180"  id="l5" stroke="#d1f2f3" stroke-width="6"></line>
+    <line x1="180" y1="185" x2="300" y2="180"  id="l5" stroke="#E1E8EA" stroke-width="6"></line>
 
     <!-- G+3 Building -->
     <rect x="140" y="300" width="100" height="60" class="building"></rect>
     <text x="172" y="316">G+3</text>
     <text x="180" y="333">Building</text>
-   <line x1="300" y1="180" x2="300" y2="335"  id="l6" stroke="#d1f2f3" stroke-width="6"></line>
-   <line x1="240" y1="330" x2="300" y2="335" id="l7" stroke="#d1f2f3" stroke-width="6"></line>
+   <line x1="300" y1="180" x2="300" y2="335"  id="l6" stroke="#E1E8EA" stroke-width="6"></line>
+   <line x1="240" y1="330" x2="300" y2="335" id="l7" stroke="#E1E8EA" stroke-width="6"></line>
 
 	<!-- welder-->
 	
 
-	<line x1="300" y1="330" x2="470" y2="330" id="l8" stroke="#d1f2f3" stroke-width="6"></line>
-	<line x1="470" y1="330" x2="470" y2="270" id="l9" stroke="#d1f2f3" stroke-width="6"></line>
-	<line x1="470" y1="270" x2="520" y2="270" id="l10" stroke="#d1f2f3" stroke-width="6"></line>
+	<line x1="300" y1="330" x2="470" y2="330" id="l8" stroke="#E1E8EA" stroke-width="6"></line>
+	<line x1="470" y1="330" x2="470" y2="270" id="l9" stroke="#E1E8EA" stroke-width="6"></line>
+	<line x1="470" y1="270" x2="520" y2="270" id="l10" stroke="#E1E8EA" stroke-width="6"></line>
 	<rect x="520" y="250" width="80" height="50" class="building"></rect>
         <text x="550" y="279">Welder</text>
 
@@ -206,13 +218,15 @@
     <rect x="82" y="460" width="150" height="40" class="building"></rect>
     <text x="170" y="475">G+1 Building</text>
     <text x="170" y="490">(New Building)</text>
-    <line x1="300" y1="335" x2="300" y2="460" id="l11" stroke="#d1f2f3" stroke-width="6"></line>
-    <line x1="230" y1="480" x2="300" y2="460" id="l12" stroke="#d1f2f3" stroke-width="6"></line>
+    <line x1="300" y1="335" x2="300" y2="460" id="l11" stroke="#E1E8EA" stroke-width="6"></line>
+    <line x1="230" y1="480" x2="300" y2="460" id="l12" stroke="#E1E8EA" stroke-width="6"></line>
 
 
 
 </svg>
-</td></tr></table>
+</td></tr>
+<tr><td colspan=2 id="fortdl" align="center">Thank You For Visit</td></tr>
+</table>
 
 
 <script>
@@ -230,29 +244,29 @@ function openPopup(imgSrc) {
 function setway1(){
 
 
-   document.getElementById("l1").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l1").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l1").setAttribute("stroke-width", "8");
-   document.getElementById("l2").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l2").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l2").setAttribute("stroke-width", "8");
-   document.getElementById("l3").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l3").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l3").setAttribute("stroke-width", "8");
-   document.getElementById("l4").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l4").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l4").setAttribute("stroke-width", "8");
-   document.getElementById("l5").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l5").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l5").setAttribute("stroke-width", "8");
-   document.getElementById("l6").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l6").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l6").setAttribute("stroke-width", "8");
-   document.getElementById("l7").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l7").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l7").setAttribute("stroke-width", "8");
-   document.getElementById("l8").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l8").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l8").setAttribute("stroke-width", "8");
-   document.getElementById("l9").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l9").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l9").setAttribute("stroke-width", "8");
-   document.getElementById("l10").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l10").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l10").setAttribute("stroke-width", "8");
-   document.getElementById("l11").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l11").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l11").setAttribute("stroke-width", "8");
-   document.getElementById("l12").setAttribute("stroke", "#d1f2f3");
+   document.getElementById("l12").setAttribute("stroke", "#E1E8EA");
    document.getElementById("l12").setAttribute("stroke-width", "8");
    
    
