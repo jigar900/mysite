@@ -50,7 +50,7 @@
 	#fortd{
 	border: 1px solid #8d0a30;
 	padding: 8px;
-	color: #8d0a30;
+	color: #13105B;
 	font-size: 12px;
 	text-anchor: middle;
 	font-family: Arial, sans-serif;
@@ -60,8 +60,8 @@
 	}
     </style>
 </head>
-<body bgcolor="grey" text=#F6CACA>
-<h1 style="border: 1px solid #8d0a30; padding: 4px; color: white;font-size: 20px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;"><b>Industrial Training Institute Pardi.</b></h1>
+<body bgcolor="#DDD7BD" text="#d1f2f3">
+<h1 style="border: 1px solid #8d0a30; padding: 4px; color: #4E48E8;font-size: 20px; text-anchor: middle; font-family: Arial, sans-serif; font:#164592; font-weight: bold;"><b>&nbsp&nbsp&nbspIndustrial Training Institute Pardi.</b></h1>
 <table border=0 >
 <tr>
 
@@ -69,7 +69,7 @@
 
 <table border=5 cellpadding=8 bgcolor="#d1f2f3" text="red">
 
-<caption><b><H3>Trade Information<H3></b></caption>
+<caption><b><H3 style="border: 1px solid #8d0a30; padding: 4px; color: #13105B;font-size: 20px; text-anchor: middle; font-family: Arial, sans-serif; font-weight: bold;">Trade Information<H3></b></caption>
 <tr>
 <td id="fortd">Apprentice office</td>
 <td colspan="2" id="fortd">Apprentice office, RTO</td>
@@ -125,8 +125,23 @@
 <td>
 
 <DIV>
-<label for="start">From:</label>
-<select id="stat" onchange="setway1()" >
+<table>
+<tr>
+
+<td><label for="start"><h3 style="padding: 4px; color: #13105B;font-size: 14px; text-anchor: middle; font-family: Arial, sans-serif; font-weight: bold;">Select Your Location:</h3></label></td>
+<td><select id="stat" onchange="setway1()" >
+<option value="gate">Gate</option>
+  <option value="apr">Aprentice Office</option>
+  <option value="copa">Office Building</option>
+  <option value="hsi">HSI/LACP Lab</option>
+  <option value="g3">G+3 Building</option>
+  <option value="g1">G+1(New Building)</option>
+  <option value="wd">Welder</option>
+</select></td></tr>
+
+<tr>
+<td><label for="start"><h3 style="padding: 4px; color: #13105B;font-size: 14px; text-anchor: middle; font-family: Arial, sans-serif; font-weight: bold;">Select Destination</h3></label></td>
+<td><select id="end1" onchange="setway1()">
 <option value="gate">Gate</option>
   <option value="apr">Aprentice Office</option>
   <option value="copa">Office Building</option>
@@ -135,18 +150,7 @@
   <option value="g1">G+1(New Building)</option>
   <option value="wd">Welder</option>
 </select>
-<br>
-<label for="start">TO:</label>
-<select id="end1" onchange="setway1()">
-<option value="gate">Gate</option>
-  <option value="apr">Aprentice Office</option>
-  <option value="copa">Office Building</option>
-  <option value="hsi">HSI/LACP Lab</option>
-  <option value="g3">G+3 Building</option>
-  <option value="g1">G+1(New Building)</option>
-  <option value="wd">Welder</option>
-</select>
-<br>
+</td></tr></table>
 <!--<button onclick="setway1()">Set Path</button>-->
 </DIV>
 <svg width="800" height="800">
@@ -155,40 +159,40 @@
 	 <text x="300" y="45" class="title">Gate</text>
 
     <!-- Paths -->
-    <line id="l1" x1="300" y1="60" x2="300" y2="120"  stroke="black" stroke-width="6" fill="white"></line>
+    <line id="l1" x1="300" y1="60" x2="300" y2="120"  stroke="#d1f2f3" stroke-width="6" fill="white"></line>
     
     <!-- Apprentice Office -->
     <rect x="360" y="110" width="80" height="40" class="building"></rect>
     <text x="400" y="125">Apprentice</text>
     <text x="400" y="138">Office</text>
-    <line x1="300" y1="120" x2="360" y2="130"  id="l2" stroke="black" stroke-width="6"></line>
+    <line x1="300" y1="120" x2="360" y2="130"  id="l2" stroke="#d1f2f3" stroke-width="6"></line>
 
     <!-- Office Building and COPA -->
     <rect x="450" y="150" width="100" height="60" class="building"></rect>
     <text x="500" y="175">Office Building</text>
     <text x="500" y="190">and COPA</text>
-    <line x1="300" y1="120" x2="300" y2="180"  id="l3" stroke="black" stroke-width="6"></line>
-    <line x1="300" y1="180" x2="450" y2="180"  id="l4" stroke="black" stroke-width="6"></line>
+    <line x1="300" y1="120" x2="300" y2="180"  id="l3" stroke="#d1f2f3" stroke-width="6"></line>
+    <line x1="300" y1="180" x2="450" y2="180"  id="l4" stroke="#d1f2f3" stroke-width="6"></line>
 
     <!-- HSI LACP Lab -->
     <rect x="80" y="170" width="100" height="60" class="building"></rect>
     <text x="110" y="195">HSI</text>
     <text x="113" y="210">LACP Lab</text>
-    <line x1="180" y1="185" x2="300" y2="180"  id="l5" stroke="black" stroke-width="6"></line>
+    <line x1="180" y1="185" x2="300" y2="180"  id="l5" stroke="#d1f2f3" stroke-width="6"></line>
 
     <!-- G+3 Building -->
     <rect x="140" y="300" width="100" height="60" class="building"></rect>
     <text x="172" y="316">G+3</text>
     <text x="180" y="333">Building</text>
-   <line x1="300" y1="180" x2="300" y2="335"  id="l6" stroke="black" stroke-width="6"></line>
-   <line x1="240" y1="330" x2="300" y2="335" id="l7" stroke="black" stroke-width="6"></line>
+   <line x1="300" y1="180" x2="300" y2="335"  id="l6" stroke="#d1f2f3" stroke-width="6"></line>
+   <line x1="240" y1="330" x2="300" y2="335" id="l7" stroke="#d1f2f3" stroke-width="6"></line>
 
 	<!-- welder-->
 	
 
-	<line x1="300" y1="330" x2="470" y2="330" id="l8" stroke="black" stroke-width="6"></line>
-	<line x1="470" y1="330" x2="470" y2="270" id="l9" stroke="black" stroke-width="6"></line>
-	<line x1="470" y1="270" x2="520" y2="270" id="l10" stroke="black" stroke-width="6"></line>
+	<line x1="300" y1="330" x2="470" y2="330" id="l8" stroke="#d1f2f3" stroke-width="6"></line>
+	<line x1="470" y1="330" x2="470" y2="270" id="l9" stroke="#d1f2f3" stroke-width="6"></line>
+	<line x1="470" y1="270" x2="520" y2="270" id="l10" stroke="#d1f2f3" stroke-width="6"></line>
 	<rect x="520" y="250" width="80" height="50" class="building"></rect>
         <text x="550" y="279">Welder</text>
 
@@ -202,8 +206,8 @@
     <rect x="82" y="460" width="150" height="40" class="building"></rect>
     <text x="170" y="475">G+1 Building</text>
     <text x="170" y="490">(New Building)</text>
-    <line x1="300" y1="335" x2="300" y2="460" id="l11" stroke="black" stroke-width="6"></line>
-    <line x1="230" y1="480" x2="300" y2="460" id="l12" stroke="black" stroke-width="6"></line>
+    <line x1="300" y1="335" x2="300" y2="460" id="l11" stroke="#d1f2f3" stroke-width="6"></line>
+    <line x1="230" y1="480" x2="300" y2="460" id="l12" stroke="#d1f2f3" stroke-width="6"></line>
 
 
 
@@ -226,263 +230,263 @@ function openPopup(imgSrc) {
 function setway1(){
 
 
-   document.getElementById("l1").setAttribute("stroke", "black");
+   document.getElementById("l1").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l1").setAttribute("stroke-width", "8");
-   document.getElementById("l2").setAttribute("stroke", "black");
+   document.getElementById("l2").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l2").setAttribute("stroke-width", "8");
-   document.getElementById("l3").setAttribute("stroke", "black");
+   document.getElementById("l3").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l3").setAttribute("stroke-width", "8");
-   document.getElementById("l4").setAttribute("stroke", "black");
+   document.getElementById("l4").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l4").setAttribute("stroke-width", "8");
-   document.getElementById("l5").setAttribute("stroke", "black");
+   document.getElementById("l5").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l5").setAttribute("stroke-width", "8");
-   document.getElementById("l6").setAttribute("stroke", "black");
+   document.getElementById("l6").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l6").setAttribute("stroke-width", "8");
-   document.getElementById("l7").setAttribute("stroke", "black");
+   document.getElementById("l7").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l7").setAttribute("stroke-width", "8");
-   document.getElementById("l8").setAttribute("stroke", "black");
+   document.getElementById("l8").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l8").setAttribute("stroke-width", "8");
-   document.getElementById("l9").setAttribute("stroke", "black");
+   document.getElementById("l9").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l9").setAttribute("stroke-width", "8");
-   document.getElementById("l10").setAttribute("stroke", "black");
+   document.getElementById("l10").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l10").setAttribute("stroke-width", "8");
-   document.getElementById("l11").setAttribute("stroke", "black");
+   document.getElementById("l11").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l11").setAttribute("stroke-width", "8");
-   document.getElementById("l12").setAttribute("stroke", "black");
+   document.getElementById("l12").setAttribute("stroke", "#d1f2f3");
    document.getElementById("l12").setAttribute("stroke-width", "8");
    
    
    if((document.getElementById("stat").value=="gate" && document.getElementById("end1").value=="apr")||(document.getElementById("stat").value=="apr" && document.getElementById("end1").value=="gate"))
 		{
-		document.getElementById("l1").setAttribute("stroke", "orange");
+		document.getElementById("l1").setAttribute("stroke", "#605DB5");
         document.getElementById("l1").setAttribute("stroke-width", "8");
-		document.getElementById("l2").setAttribute("stroke", "orange");
+		document.getElementById("l2").setAttribute("stroke", "#605DB5");
         document.getElementById("l2").setAttribute("stroke-width", "8");
 		}
 	if((document.getElementById("stat").value=="gate" && document.getElementById("end1").value=="copa")||(document.getElementById("stat").value=="copa" && document.getElementById("end1").value=="gate"))
 		{
-		document.getElementById("l1").setAttribute("stroke", "orange");
+		document.getElementById("l1").setAttribute("stroke", "#605DB5");
         document.getElementById("l1").setAttribute("stroke-width", "8");
-		document.getElementById("l3").setAttribute("stroke", "orange");
+		document.getElementById("l3").setAttribute("stroke", "#605DB5");
         document.getElementById("l3").setAttribute("stroke-width", "8");
-		document.getElementById("l4").setAttribute("stroke", "orange");
+		document.getElementById("l4").setAttribute("stroke", "#605DB5");
         document.getElementById("l4").setAttribute("stroke-width", "8");
 		}
 		if((document.getElementById("stat").value=="gate" && document.getElementById("end1").value=="hsi")||(document.getElementById("stat").value=="hsi" && document.getElementById("end1").value=="gate"))
 		{
-		document.getElementById("l1").setAttribute("stroke", "orange");
+		document.getElementById("l1").setAttribute("stroke", "#605DB5");
         document.getElementById("l1").setAttribute("stroke-width", "8");
-		document.getElementById("l3").setAttribute("stroke", "orange");
+		document.getElementById("l3").setAttribute("stroke", "#605DB5");
         document.getElementById("l3").setAttribute("stroke-width", "8");
-		document.getElementById("l5").setAttribute("stroke", "orange");
+		document.getElementById("l5").setAttribute("stroke", "#605DB5");
         document.getElementById("l5").setAttribute("stroke-width", "8");
 		}
 		if((document.getElementById("stat").value=="gate" && document.getElementById("end1").value=="g3")||(document.getElementById("stat").value=="g3" && document.getElementById("end1").value=="gate"))
 		{
-		document.getElementById("l1").setAttribute("stroke", "orange");
+		document.getElementById("l1").setAttribute("stroke", "#605DB5");
         document.getElementById("l1").setAttribute("stroke-width", "8");
-		document.getElementById("l3").setAttribute("stroke", "orange");
+		document.getElementById("l3").setAttribute("stroke", "#605DB5");
         document.getElementById("l3").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l7").setAttribute("stroke", "orange");
+		document.getElementById("l7").setAttribute("stroke", "#605DB5");
         document.getElementById("l7").setAttribute("stroke-width", "8");
 	
 		}
 		if((document.getElementById("stat").value=="gate" && document.getElementById("end1").value=="g1")||(document.getElementById("stat").value=="g1" && document.getElementById("end1").value=="gate"))
 		{
-		document.getElementById("l1").setAttribute("stroke", "orange");
+		document.getElementById("l1").setAttribute("stroke", "#605DB5");
         document.getElementById("l1").setAttribute("stroke-width", "8");
-		document.getElementById("l3").setAttribute("stroke", "orange");
+		document.getElementById("l3").setAttribute("stroke", "#605DB5");
         document.getElementById("l3").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l11").setAttribute("stroke", "orange");
+		document.getElementById("l11").setAttribute("stroke", "#605DB5");
         document.getElementById("l11").setAttribute("stroke-width", "8");
-		document.getElementById("l12").setAttribute("stroke", "orange");
+		document.getElementById("l12").setAttribute("stroke", "#605DB5");
         document.getElementById("l12").setAttribute("stroke-width", "8");
 	
 		}
 		if((document.getElementById("stat").value=="gate" && document.getElementById("end1").value=="wd")||(document.getElementById("stat").value=="wd" && document.getElementById("end1").value=="gate"))
 		{
-		document.getElementById("l1").setAttribute("stroke", "orange");
+		document.getElementById("l1").setAttribute("stroke", "#605DB5");
         document.getElementById("l1").setAttribute("stroke-width", "8");
-		document.getElementById("l3").setAttribute("stroke", "orange");
+		document.getElementById("l3").setAttribute("stroke", "#605DB5");
         document.getElementById("l3").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l8").setAttribute("stroke", "orange");
+		document.getElementById("l8").setAttribute("stroke", "#605DB5");
         document.getElementById("l8").setAttribute("stroke-width", "8");
-		document.getElementById("l9").setAttribute("stroke", "orange");
+		document.getElementById("l9").setAttribute("stroke", "#605DB5");
         document.getElementById("l9").setAttribute("stroke-width", "8");
-		document.getElementById("l10").setAttribute("stroke", "orange");
+		document.getElementById("l10").setAttribute("stroke", "#605DB5");
         document.getElementById("l10").setAttribute("stroke-width", "8");
 	
 		}
 		
 		if((document.getElementById("stat").value=="apr" && document.getElementById("end1").value=="copa")||(document.getElementById("stat").value=="copa" && document.getElementById("end1").value=="apr"))
 		{
-		document.getElementById("l2").setAttribute("stroke", "orange");
+		document.getElementById("l2").setAttribute("stroke", "#605DB5");
         document.getElementById("l2").setAttribute("stroke-width", "8");
-		document.getElementById("l3").setAttribute("stroke", "orange");
+		document.getElementById("l3").setAttribute("stroke", "#605DB5");
         document.getElementById("l3").setAttribute("stroke-width", "8");
-		document.getElementById("l4").setAttribute("stroke", "orange");
+		document.getElementById("l4").setAttribute("stroke", "#605DB5");
         document.getElementById("l4").setAttribute("stroke-width", "8");
 		
 	
 		}
 		if((document.getElementById("stat").value=="apr" && document.getElementById("end1").value=="hsi")||(document.getElementById("stat").value=="hsi" && document.getElementById("end1").value=="apr"))
 		{
-		document.getElementById("l2").setAttribute("stroke", "orange");
+		document.getElementById("l2").setAttribute("stroke", "#605DB5");
         document.getElementById("l2").setAttribute("stroke-width", "8");
-		document.getElementById("l3").setAttribute("stroke", "orange");
+		document.getElementById("l3").setAttribute("stroke", "#605DB5");
         document.getElementById("l3").setAttribute("stroke-width", "8");
-		document.getElementById("l5").setAttribute("stroke", "orange");
+		document.getElementById("l5").setAttribute("stroke", "#605DB5");
         document.getElementById("l5").setAttribute("stroke-width", "8");	
 		}
 		if((document.getElementById("stat").value=="apr" && document.getElementById("end1").value=="g3")||(document.getElementById("stat").value=="g3" && document.getElementById("end1").value=="apr"))
 		{
-		document.getElementById("l2").setAttribute("stroke", "orange");
+		document.getElementById("l2").setAttribute("stroke", "#605DB5");
         document.getElementById("l2").setAttribute("stroke-width", "8");
-		document.getElementById("l3").setAttribute("stroke", "orange");
+		document.getElementById("l3").setAttribute("stroke", "#605DB5");
         document.getElementById("l3").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l7").setAttribute("stroke", "orange");
+		document.getElementById("l7").setAttribute("stroke", "#605DB5");
         document.getElementById("l7").setAttribute("stroke-width", "8");			
 		}
 		if((document.getElementById("stat").value=="apr" && document.getElementById("end1").value=="g1")||(document.getElementById("stat").value=="g1" && document.getElementById("end1").value=="apr"))
 		{
-		document.getElementById("l2").setAttribute("stroke", "orange");
+		document.getElementById("l2").setAttribute("stroke", "#605DB5");
         document.getElementById("l2").setAttribute("stroke-width", "8");
-		document.getElementById("l3").setAttribute("stroke", "orange");
+		document.getElementById("l3").setAttribute("stroke", "#605DB5");
         document.getElementById("l3").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l11").setAttribute("stroke", "orange");
+		document.getElementById("l11").setAttribute("stroke", "#605DB5");
         document.getElementById("l11").setAttribute("stroke-width", "8");
-		document.getElementById("l12").setAttribute("stroke", "orange");
+		document.getElementById("l12").setAttribute("stroke", "#605DB5");
         document.getElementById("l12").setAttribute("stroke-width", "8");		
 		}
 		if((document.getElementById("stat").value=="apr" && document.getElementById("end1").value=="wd")||(document.getElementById("stat").value=="wd" && document.getElementById("end1").value=="apr"))
 		{
-		document.getElementById("l2").setAttribute("stroke", "orange");
+		document.getElementById("l2").setAttribute("stroke", "#605DB5");
         document.getElementById("l2").setAttribute("stroke-width", "8");
-		document.getElementById("l3").setAttribute("stroke", "orange");
+		document.getElementById("l3").setAttribute("stroke", "#605DB5");
         document.getElementById("l3").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l8").setAttribute("stroke", "orange");
+		document.getElementById("l8").setAttribute("stroke", "#605DB5");
         document.getElementById("l8").setAttribute("stroke-width", "8");
-		document.getElementById("l9").setAttribute("stroke", "orange");
+		document.getElementById("l9").setAttribute("stroke", "#605DB5");
         document.getElementById("l9").setAttribute("stroke-width", "8");
-		document.getElementById("l10").setAttribute("stroke", "orange");
+		document.getElementById("l10").setAttribute("stroke", "#605DB5");
         document.getElementById("l10").setAttribute("stroke-width", "8");		
 		}
 		if((document.getElementById("stat").value=="copa" && document.getElementById("end1").value=="hsi")||(document.getElementById("stat").value=="hsi" && document.getElementById("end1").value=="copa"))
 		{
-		document.getElementById("l4").setAttribute("stroke", "orange");
+		document.getElementById("l4").setAttribute("stroke", "#605DB5");
         document.getElementById("l4").setAttribute("stroke-width", "8");
-		document.getElementById("l5").setAttribute("stroke", "orange");
+		document.getElementById("l5").setAttribute("stroke", "#605DB5");
         document.getElementById("l5").setAttribute("stroke-width", "8");
 		}
 		if((document.getElementById("stat").value=="copa" && document.getElementById("end1").value=="g3")||(document.getElementById("stat").value=="g3" && document.getElementById("end1").value=="copa"))
 		{
-		document.getElementById("l4").setAttribute("stroke", "orange");
+		document.getElementById("l4").setAttribute("stroke", "#605DB5");
         document.getElementById("l4").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l7").setAttribute("stroke", "orange");
+		document.getElementById("l7").setAttribute("stroke", "#605DB5");
         document.getElementById("l7").setAttribute("stroke-width", "8");			
 		}
 		if((document.getElementById("stat").value=="copa" && document.getElementById("end1").value=="g1")||(document.getElementById("stat").value=="g1" && document.getElementById("end1").value=="copa"))
 		{
-		document.getElementById("l4").setAttribute("stroke", "orange");
+		document.getElementById("l4").setAttribute("stroke", "#605DB5");
         document.getElementById("l4").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l11").setAttribute("stroke", "orange");
+		document.getElementById("l11").setAttribute("stroke", "#605DB5");
         document.getElementById("l11").setAttribute("stroke-width", "8");
-		document.getElementById("l12").setAttribute("stroke", "orange");
+		document.getElementById("l12").setAttribute("stroke", "#605DB5");
         document.getElementById("l12").setAttribute("stroke-width", "8");		
 		}
 		if((document.getElementById("stat").value=="copa" && document.getElementById("end1").value=="wd")||(document.getElementById("stat").value=="wd" && document.getElementById("end1").value=="copa"))
 		{
-		document.getElementById("l4").setAttribute("stroke", "orange");
+		document.getElementById("l4").setAttribute("stroke", "#605DB5");
         document.getElementById("l4").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l8").setAttribute("stroke", "orange");
+		document.getElementById("l8").setAttribute("stroke", "#605DB5");
         document.getElementById("l8").setAttribute("stroke-width", "8");
-		document.getElementById("l9").setAttribute("stroke", "orange");
+		document.getElementById("l9").setAttribute("stroke", "#605DB5");
         document.getElementById("l9").setAttribute("stroke-width", "8");
-		document.getElementById("l10").setAttribute("stroke", "orange");
+		document.getElementById("l10").setAttribute("stroke", "#605DB5");
         document.getElementById("l10").setAttribute("stroke-width", "8");		
 		}
 		if((document.getElementById("stat").value=="hsi" && document.getElementById("end1").value=="g3")||(document.getElementById("stat").value=="g3" && document.getElementById("end1").value=="hsi"))
 		{
-		document.getElementById("l5").setAttribute("stroke", "orange");
+		document.getElementById("l5").setAttribute("stroke", "#605DB5");
         document.getElementById("l5").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l7").setAttribute("stroke", "orange");
+		document.getElementById("l7").setAttribute("stroke", "#605DB5");
         document.getElementById("l7").setAttribute("stroke-width", "8");
 		}
 		if((document.getElementById("stat").value=="hsi" && document.getElementById("end1").value=="g1")||(document.getElementById("stat").value=="g1" && document.getElementById("end1").value=="hsi"))
 		{
-		document.getElementById("l5").setAttribute("stroke", "orange");
+		document.getElementById("l5").setAttribute("stroke", "#605DB5");
         document.getElementById("l5").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l11").setAttribute("stroke", "orange");
+		document.getElementById("l11").setAttribute("stroke", "#605DB5");
         document.getElementById("l11").setAttribute("stroke-width", "8");
-		document.getElementById("l12").setAttribute("stroke", "orange");
+		document.getElementById("l12").setAttribute("stroke", "#605DB5");
         document.getElementById("l12").setAttribute("stroke-width", "8");
 		}
 		if((document.getElementById("stat").value=="hsi" && document.getElementById("end1").value=="wd")||(document.getElementById("stat").value=="wd" && document.getElementById("end1").value=="hsi"))
 		{
-		document.getElementById("l5").setAttribute("stroke", "orange");
+		document.getElementById("l5").setAttribute("stroke", "#605DB5");
         document.getElementById("l5").setAttribute("stroke-width", "8");
-		document.getElementById("l6").setAttribute("stroke", "orange");
+		document.getElementById("l6").setAttribute("stroke", "#605DB5");
         document.getElementById("l6").setAttribute("stroke-width", "8");
-		document.getElementById("l8").setAttribute("stroke", "orange");
+		document.getElementById("l8").setAttribute("stroke", "#605DB5");
         document.getElementById("l8").setAttribute("stroke-width", "8");
-		document.getElementById("l9").setAttribute("stroke", "orange");
+		document.getElementById("l9").setAttribute("stroke", "#605DB5");
         document.getElementById("l9").setAttribute("stroke-width", "8");
-		document.getElementById("l10").setAttribute("stroke", "orange");
+		document.getElementById("l10").setAttribute("stroke", "#605DB5");
         document.getElementById("l10").setAttribute("stroke-width", "8");		
 		}
 		if((document.getElementById("stat").value=="g3" && document.getElementById("end1").value=="g1")||(document.getElementById("stat").value=="g1" && document.getElementById("end1").value=="g3"))
 		{
-		document.getElementById("l7").setAttribute("stroke", "orange");
+		document.getElementById("l7").setAttribute("stroke", "#605DB5");
         document.getElementById("l7").setAttribute("stroke-width", "8");
-		document.getElementById("l11").setAttribute("stroke", "orange");
+		document.getElementById("l11").setAttribute("stroke", "#605DB5");
         document.getElementById("l11").setAttribute("stroke-width", "8");
-		document.getElementById("l12").setAttribute("stroke", "orange");
+		document.getElementById("l12").setAttribute("stroke", "#605DB5");
         document.getElementById("l12").setAttribute("stroke-width", "8");
 		}
 		if((document.getElementById("stat").value=="g3" && document.getElementById("end1").value=="wd")||(document.getElementById("stat").value=="wd" && document.getElementById("end1").value=="g3"))
 		{
-		document.getElementById("l7").setAttribute("stroke", "orange");
+		document.getElementById("l7").setAttribute("stroke", "#605DB5");
         document.getElementById("l7").setAttribute("stroke-width", "8");
-		document.getElementById("l8").setAttribute("stroke", "orange");
+		document.getElementById("l8").setAttribute("stroke", "#605DB5");
         document.getElementById("l8").setAttribute("stroke-width", "8");
-		document.getElementById("l9").setAttribute("stroke", "orange");
+		document.getElementById("l9").setAttribute("stroke", "#605DB5");
         document.getElementById("l9").setAttribute("stroke-width", "8");
-		document.getElementById("l10").setAttribute("stroke", "orange");
+		document.getElementById("l10").setAttribute("stroke", "#605DB5");
         document.getElementById("l10").setAttribute("stroke-width", "8");	
 		}
 		if((document.getElementById("stat").value=="g1" && document.getElementById("end1").value=="wd")||(document.getElementById("stat").value=="wd" && document.getElementById("end1").value=="g1"))
 		{
-		document.getElementById("l11").setAttribute("stroke", "orange");
+		document.getElementById("l11").setAttribute("stroke", "#605DB5");
         document.getElementById("l11").setAttribute("stroke-width", "8");
-		document.getElementById("l12").setAttribute("stroke", "orange");
+		document.getElementById("l12").setAttribute("stroke", "#605DB5");
         document.getElementById("l12").setAttribute("stroke-width", "8");
-		document.getElementById("l8").setAttribute("stroke", "orange");
+		document.getElementById("l8").setAttribute("stroke", "#605DB5");
         document.getElementById("l8").setAttribute("stroke-width", "8");
-		document.getElementById("l9").setAttribute("stroke", "orange");
+		document.getElementById("l9").setAttribute("stroke", "#605DB5");
         document.getElementById("l9").setAttribute("stroke-width", "8");
-		document.getElementById("l10").setAttribute("stroke", "orange");
+		document.getElementById("l10").setAttribute("stroke", "#605DB5");
         document.getElementById("l10").setAttribute("stroke-width", "8");	
 		}
 		
